@@ -51,15 +51,16 @@ remove_previous () {
   fi
 }
 
-# read image tag from breadcrumb file
-if [ -e "${BREADCRUMB_FILE}" ]; then
-  echo "Reading image tag from: ${BREADCRUMB_FILE}"
-  echo "----"
-  cat ${BREADCRUMB_FILE}
-  echo "----"
-  IMAGE=`cat ${BREADCRUMB_FILE} | grep ${BREADCRUMB_IMAGE_KEY} | sed 's/.*=\(.*\)/\1/'`
-  echo "Read image tag = ${IMAGE}"
-fi
+# Assume IMAGE will be available as an environment variable
+## read image tag from breadcrumb file
+#if [ -e "${BREADCRUMB_FILE}" ]; then
+#  echo "Reading image tag from: ${BREADCRUMB_FILE}"
+#  echo "----"
+#  cat ${BREADCRUMB_FILE}
+#  echo "----"
+#  IMAGE=`cat ${BREADCRUMB_FILE} | grep ${BREADCRUMB_IMAGE_KEY} | sed 's/.*=\(.*\)/\1/'`
+#  echo "Read image tag = ${IMAGE}"
+#fi
 
 # allow command line to override values
 while [ $# -ge 1 ]
