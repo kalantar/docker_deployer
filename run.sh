@@ -202,6 +202,8 @@ if [ ${DEBUG} -eq 0 ]; then
 
   # A new container was created and started, remove the previous one
   remove_previous
+  # output resulting container
+  echo "{\"container\":\"${CONTAINER_ID}\"}" > $__STATUS__/out
     
 fi
 # cleanup request bodies
