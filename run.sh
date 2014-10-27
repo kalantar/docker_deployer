@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Change to workspace
-cd ${__DATA__}/docker
+cd ${__ARCHIVE__}/docker
 
 # Define some constants
 BREADCRUMB_FILE="breadcrumb"
